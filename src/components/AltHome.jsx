@@ -4,6 +4,7 @@ import { useContext } from "react";
 import { Context, server } from "../main";
 import axios from "axios";
 import { toast } from "react-hot-toast";
+import PizzaImg from "../assets/piz-2.jpeg";
 
 const AltHome = () => {
   const { pizzas, isAuthenticated } = useContext(Context);
@@ -103,7 +104,7 @@ const PizzaSlide = ({
       </VStack>
       <VStack w={["full", "50%"]}>
         <motion.div>
-          <Image w={"40vmax"} src={"./src/assets/piz-2.jpeg"}></Image>
+          <Image w={"40vmax"} src={PizzaImg}></Image>
         </motion.div>
       </VStack>
     </HStack>

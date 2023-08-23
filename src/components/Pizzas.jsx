@@ -15,6 +15,7 @@ import { Context, server } from "../main";
 import axios from "axios";
 import { useDispatch } from "react-redux";
 import { toast } from "react-hot-toast";
+import PizzaImg from "../assets/pizza-1.jpg";
 
 const Pizzas = () => {
   const { pizzas, setPizzas, isAuthenticated } = useContext(Context);
@@ -69,6 +70,7 @@ const Pizzas = () => {
       .get(`${server}/pizza/pizzas`)
       .then((res) => {
         setPizzas(res.data.message);
+        console.log("inside", `${server}/pizza/pizzas`);
       })
       .catch((error) => {
         console.log(error);
@@ -103,7 +105,7 @@ const PizzaCard = ({
   return (
     <Card maxW={"sm"} variant={"elevated"} boxShadow={"md"}>
       <CardBody>
-        <Image src={"./src/assets/pizza-1.jpg"}></Image>
+        <Image src={PizzaImg}></Image>
         <Stack mt={"6"} spacing={"3"}>
           <Heading size={"md"}>{name}</Heading>
           <Text>{description}</Text>
