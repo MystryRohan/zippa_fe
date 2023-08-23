@@ -14,6 +14,7 @@ import axios from "axios";
 import Login from "./Login";
 import { toast } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+import PizzaImg from "../assets/pizza-1.jpg";
 
 const Cart = () => {
   const { isAuthenticated, pizzas } = useContext(Context);
@@ -147,11 +148,7 @@ const CartItem = ({ qty, name, deleteHandler }) => {
       p={"3"}
     >
       <HStack h={"16"} w={"fit-content"}>
-        <Image
-          objectFit={"contain"}
-          w={"8vmax"}
-          src={"./src/assets/pizza-1.jpg"}
-        />
+        <Image objectFit={"contain"} w={"8vmax"} src={PizzaImg} />
         <Heading size={"xs"} pl={"3"}>
           {name}
         </Heading>
