@@ -5,7 +5,7 @@ import { ChakraProvider, theme, ColorModeScript } from "@chakra-ui/react";
 import { Provider } from "react-redux";
 import store from "./redux/store.js";
 
-export const server = "http://localhost:5000/api/v1";
+export const server = "https://zippa-node.onrender.com/api/v1";
 
 export const Context = createContext({ isAuthenticated: false });
 
