@@ -10,7 +10,7 @@ import axios from "axios";
 import { useState, useContext } from "react";
 import { server, Context } from "../main";
 import { toast } from "react-hot-toast";
-import { Navigate, useNavigate } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 
 const Register = () => {
   const [email, setEmail] = useState("");
@@ -42,9 +42,9 @@ const Register = () => {
     }
   };
   return (
-    <VStack justifyContent={"center"} h={"90vh"}>
+    <VStack justifyContent={"center"} h={"90vh"} p={"4"}>
       <form onSubmit={submitHandler}>
-        <Box w={"sm"} h={"sm"}>
+        <Box w={"xs"} h={"sm"}>
           <Box pt={"2"} pb={"2"}>
             <FormLabel>Email</FormLabel>
             <Input
@@ -84,6 +84,15 @@ const Register = () => {
 
           <Button w={"100%"} colorScheme="orange" type="submit" mt={"2"}>
             Register
+          </Button>
+          <Button
+            w={"100%"}
+            colorScheme="orange"
+            type="button"
+            mt={"2"}
+            variant={"outline"}
+          >
+            <Link to={"/login"}>Sign In</Link>
           </Button>
         </Box>
       </form>

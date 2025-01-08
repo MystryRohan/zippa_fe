@@ -7,7 +7,7 @@ const Header = ({ getPizza }) => {
     <HStack
       top={"0"}
       left={"0"}
-      p={["2", "10"]}
+      p={["4", "10"]}
       pos={"sticky"}
       w={"full"}
       h={"10vh"}

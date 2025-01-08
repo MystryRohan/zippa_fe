@@ -15,6 +15,7 @@ import Login from "./Login";
 import { toast } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import PizzaImg from "../assets/pizza-1.jpg";
+import EmptyCart from "../assets/empty_cart.png";
 
 const Cart = () => {
   const { isAuthenticated, pizzas } = useContext(Context);
@@ -131,7 +132,8 @@ const Cart = () => {
           </VStack>
         </Flex>
       ) : (
-        <VStack>
+        <VStack h={"90vh"} justifyContent={"center"} p={"4"}>
+          <Image src={EmptyCart} objectFit={"contain"} w={"md"} />
           <Heading>Cart is Empty...</Heading>
         </VStack>
       )}
